@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}  {% endblock title %} | Notice Hub</title>
+    <link rel="stylesheet" href={% static "/css/style1.css" %}>
+</head>
+<body>
+    <h1>Notice Hub</h1>
+    <h2>----------Your Notices Will Show Here----------</h2>
+    <ul>
+        {% for notice in notices %}
+            <li>
+                <h2>{{ notice.title }}</h2>
+                <p>{{ notice.content }}</p>
+                {% if notice.attachments %}
+                Attachment:<a class="Attachment" href="{{ notice.attachments.url }}" target="_blank">{{ notice.attachments.name }}</a>
+                {% endif %}
+                <p class="date">Date: {{ notice.timestamp }}</p>
+                <a class="remove-link" href="{% url 'remove_notice' notice.id %}">Remove</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

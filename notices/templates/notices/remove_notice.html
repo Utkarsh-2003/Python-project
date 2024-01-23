@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Notice</title>
+    <link rel="stylesheet" href={% static "/css/style2.css" %}>
+</head>
+<body>
+    <h1>Remove Notice</h1>
+    <p>Are you sure you want to remove the notice "{{ notice.title }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Remove</button>
+    </form>
+    <a href="{% url 'notice_list' %}">Cancel</a>
+</body>
+</html>

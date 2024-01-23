@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin:10px;
+    color: #fff;
+    border-radius:25px;
+}
+
+a {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #2c3e50;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+li:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #333;
+    margin:10px;
+    text-align:center;
+}
+
+p {
+    color: #555;
+    margin: 0;
+    line-height: 1.4;
+}
+
+p.date {
+    color: #999;
+    margin-top: 10px;
+}
+
+.remove-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.remove-link:hover {
+    color: #c0392b;
+}
+a.Attachment {
+    margin-top: 10px; 
+}
